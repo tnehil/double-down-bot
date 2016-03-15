@@ -25,4 +25,6 @@ for feed in feeds:
     f = feedparser.parse(url)
     for entry in f['entries']:
         if re.search(exp, entry['title']):
-            slack.chat.post_message(slack_channel, "%s IS DOUBLING DOWN: %s" % (title, entry['link']), as_user=True)
+            slack.chat.post_message(slack_channel,
+                                    "%s IS DOUBLING DOWN: %s" % (title, entry['link']),
+                                    as_user=True)
