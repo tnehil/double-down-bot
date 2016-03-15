@@ -18,7 +18,7 @@ feeds = [("MINNPOST", "https://www.minnpost.com/rss.xml"),
          ("MPR","http://feeds.mpr.org/MPR_NewsFeatures"),
         ]
 
-exp = re.compile(r'[Dd]oubl.*\b[ -][Dd]own')
+exp = re.compile(r'[Dd]oubl.*[ -][Dd]own')
 
 for feed in feeds:
     title, url = feed
