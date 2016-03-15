@@ -2,19 +2,27 @@
 
 import feedparser
 import re
+import os
+from slacker import Slacker
 
-feeds = ["https://www.minnpost.com/rss.xml",
-         "http://www.startribune.com/rss/?sf=1&s=/",
-         "http://www.startribune.com/local/index.rss2",
-         "http://www.startribune.com/politics/index.rss2",
-         "http://www.twincities.com/feed/",
-         "http://feeds.mpr.org/MPR_NewsFeatures",
+slack_token = os.environ['DD_BOT_TOKEN']
+slack_channel = "#socialmedia" #update to use env variable probably
+
+slack = Slacker(slack_token)
+
+feeds = [("MINNPOST", "https://www.minnpost.com/rss.xml"),
+         ("THE STAR TRIBUNE", "http://www.startribune.com/rss/?sf=1&s=/"),
+         ("THE STAR TRIBUNE", "http://www.startribune.com/local/index.rss2"),
+         ("THE STAR TRIBUNE", "http://www.startribune.com/politics/index.rss2"),
+         ("THE PIONEER PRESS","http://www.twincities.com/feed/"),
+         ("MPR","http://feeds.mpr.org/MPR_NewsFeatures"),
         ]
 
-exp = re.compile(r'[Dd]oubles?[ -][Dd]own')
+exp = re.compile(r'[Dd]ouble?s?i?n?g?[ -][Dd]own')
 
 for feed in feeds:
-    f = feedparser.parse(feed)
+    title, url = feed
+    f = feedparser.parse(url)
     for entry in f['entries']:
         if re.search(exp, entry['title']):
-            return entry['title'], entry['link']
+            slack.chat.post_message(slack_channel, "%s IS DOUBLING DOWN: %s" % (title, entry['link'])
