@@ -1,0 +1,28 @@
+{
+    "feeds": [
+        {
+            "outlet": "MINNPOST",
+            "feed_url": "https://www.minnpost.com/rss.xml"
+        },
+        {
+            "outlet": "THE STAR TRIBUNE",
+            "feed_url": "http://www.startribune.com/rss/?sf=1&s=/"
+        },
+        {
+            "outlet": "THE STAR TRIBUNE",
+            "feed_url": "http://www.startribune.com/local/index.rss2"
+        },
+        {
+            "outlet": "THE STAR TRIBUNE",
+            "feed_url": "http://www.startribune.com/politics/index.rss2"
+        },
+        {
+            "outlet": "THE PIONEER PRESS",
+            "feed_url": "http://www.twincities.com/feed/"
+        },
+        {
+            "outlet": "MPR",
+            "feed_url": "http://feeds.mpr.org/MPR_NewsFeatures"
+        }
+    ]
+}
