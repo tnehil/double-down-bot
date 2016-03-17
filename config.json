@@ -1,4 +1,5 @@
 {
+    "slack_channel": "@tom",
     "feeds": [
         {
             "outlet": "MINNPOST",
@@ -23,6 +24,10 @@
         {
             "outlet": "MPR",
             "feed_url": "http://feeds.mpr.org/MPR_NewsFeatures"
+        },
+        {
+            "outlet": "MinnPostApps",
+            "feed_url": "http://minnpostapps.tumblr.com/rss"
         }
     ]
 }
