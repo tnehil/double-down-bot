@@ -1,5 +1,5 @@
 {
-    "slack_channel": "@tom",
+    "slack_channel": "#socialmedia",
     "feeds": [
         {
             "outlet": "MINNPOST",
@@ -22,12 +22,12 @@
             "feed_url": "http://www.twincities.com/feed/"
         },
         {
+            "outlet": "THE PIONEER PRESS",
+            "feed_url": "http://www.twincities.com/section/news/government-politics/feed/"
+        },
+        {
             "outlet": "MPR",
             "feed_url": "http://feeds.mpr.org/MPR_NewsFeatures"
         },
-        {
-            "outlet": "MinnPostApps",
-            "feed_url": "http://minnpostapps.tumblr.com/rss"
-        }
     ]
 }
