@@ -13,7 +13,7 @@ slack = Slacker(slack_token)
 redis_url = os.environ['DD_REDIS_URL']
 cache = redis.StrictRedis.from_url(redis_url)
 
-fp = open('../config.json', 'r')
+fp = open('config.json', 'r')
 config = json.load(fp)
 fp.close()
 

@@ -28,6 +28,6 @@
         {
             "outlet": "MPR",
             "feed_url": "http://feeds.mpr.org/MPR_NewsFeatures"
-        },
+        }
     ]
 }
